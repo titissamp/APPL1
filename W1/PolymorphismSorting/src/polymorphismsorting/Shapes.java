@@ -9,6 +9,14 @@ package polymorphismsorting;
  *
  * @author LENOVO
  */
-public class Shapes {
-    
+public abstract class Shapes {
+    private String shapeName;
+    public Shapes (String shapeName)
+    {
+        this.shapeName = shapeName;
+    }
+    public abstract double area();
+    public String toString(){
+        return super.toString() + "Shape Name : " + shapeName;
+    }
 }
