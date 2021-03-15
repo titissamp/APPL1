@@ -16,10 +16,10 @@ public class Commission extends Hourly {
     public Commission (String eName, String eAddress, String ePhone, String socSecNumber, double rate, double Comrate)
     {
         super (eName, eAddress, ePhone, socSecNumber, rate);
-        Comrate = CommissionRate;
+        CommissionRate = Comrate;
     }
-    public void addSales (double Total){
-        TotalSales += Total;
+    public void addSales (double totalSales){
+        TotalSales = TotalSales + totalSales;
     }
     
     @Override
