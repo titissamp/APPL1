@@ -19,7 +19,22 @@ public class Commission extends Hourly {
         Comrate = CommissionRate;
     }
     public void addSales (double Total){
-        TotalSales = Total + TotalSales;
+        TotalSales += Total;
     }
     
+    @Override
+       public double pay(){
+           TotalSales = TotalSales * CommissionRate + super.pay();
+           double myPay = TotalSales;
+           TotalSales = 0;
+           return myPay;
+       }
+       
+       public String toString()
+       {
+           String result = super.toString();
+           result = result + "\nTotal Sales: " + TotalSales;
+           return result;
+       }
+       
 }
