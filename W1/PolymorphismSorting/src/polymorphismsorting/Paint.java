@@ -26,6 +26,6 @@ public class Paint
     public double amount(Shapes s)
     {
         System.out.println ("Computing amount for " + s);
-        return s.area();
+        return s.area()/coverage;
     }
 }

@@ -21,10 +21,12 @@ public class PaintThings
     {
         final double COVERAGE = 350;
         Paint paint = new Paint(COVERAGE);
-        Rectangle deck;
-        Sphere bigBall;
-        Cylinder tank;
-        double deckAmt, ballAmt, tankAmt;
+        Rectangle deck = new Rectangle (20, 35);
+        Sphere bigBall = new Sphere (15);
+        Cylinder tank = new Cylinder (10, 30);
+        double deckAmt = paint.amount(deck);
+        double ballAmt = paint.amount(bigBall);
+        double tankAmt = paint.amount(tank) ;
 // Instantiate the three shapes to paint
 // Compute the amount of paint needed for each shape
 // Print the amount of paint for each.
