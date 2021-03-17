@@ -26,17 +26,28 @@ public class CirclePanel extends JPanel
         x = (width/2)-(CIRCLE_SIZE/2);  
         y = (height/2)-(CIRCLE_SIZE/2);  
         c = Color.green;  
- // Need a border layout to get the buttons on the bottom   this.setLayout(new BorderLayout());  
+ // Need a border layout to get the buttons on the bottom   
+        this.setLayout(new BorderLayout());  
  // Create buttons to move the circle  
         JButton left = new JButton("Left");  
         JButton right = new JButton("Right");  
         JButton up = new JButton("Up");  
-        JButton down = new JButton("Down");  
+        JButton down = new JButton("Down");
+ // Create buttons to change color
+         JButton orange = new JButton("Orange");
+         JButton blue = new JButton("Blue");
+         JButton red = new JButton("Red");
+         JButton pink = new JButton("Pink");
  // Add listeners to the buttons  
         left.addActionListener(new MoveListener(-20,0));   
         right.addActionListener(new MoveListener(20,0));   
         up.addActionListener(new MoveListener(0,-20));   
-        down.addActionListener(new MoveListener(0,20));  
+        down.addActionListener(new MoveListener(0,20)); 
+// Add listeners to the color buttons        
+        orange.addActionListener(new ColorListener(Color.ORANGE));
+        blue.addActionListener(new ColorListener(Color.BLUE));
+        red.addActionListener(new ColorListener(Color.RED));
+        pink.addActionListener(new ColorListener(Color.PINK));
  // Need a panel to put the buttons on or they'll be on   
  // top of each other.  
         JPanel buttonPanel = new JPanel();  
