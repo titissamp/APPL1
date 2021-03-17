@@ -18,19 +18,23 @@ public class Strings
 // --------------------------------------------
 public static void main (String[] args)
 {
-    int[] intList;
+    Strings[] stringList;
     int size;
     Scanner scan = new Scanner(System.in);
-    System.out.print ("\nHow many integers do you want to sort? ");
+    System.out.print ("\nHow many string do you want to sort? ");
     size = scan.nextInt();
-    intList = new int[size];
-    System.out.println ("\nEnter the numbers...");
+    stringList = new Strings[size];
+    System.out.println ("\nEnter the string...");
+    for (int i = 0; i < size; i++){
+        String[] intList = null;
+        intList[i] = scan.next();
+    }
+        
+    Sorting.insertionSort((Comparable[]) stringList);
+    System.out.println ("\nYour numbers in sorted order...");
     for (int i = 0; i < size; i++)
-        intList[i] = scan.nextInt();
-        Sorting.insertionSort(intList);
-        System.out.println ("\nYour numbers in sorted order...");
-    for (int i = 0; i < size; i++)
-        System.out.print(intList[i] + " ");
-        System.out.println ();
+        System.out.print(stringList[i] + " ");
+        
+    System.out.println ();
 }
 }

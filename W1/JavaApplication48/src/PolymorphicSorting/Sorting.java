@@ -26,9 +26,10 @@ public static void selectionSort (Comparable[] list)
             if (list[scan].compareTo(list[min]) < 0)
                 min = scan;
 // Swap the values
-                temp = list[min];
-                list[min] = list[index];
-                list[index] = temp;
+                
+            temp = list[min];
+            list[min] = list[index];
+            list[index] = temp;
     }
 }
 //-----------------------------------------------------------------
@@ -52,6 +53,10 @@ public static void insertionSort (Comparable[] list)
 }
 
     static void insertionSort(int[] intList) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    static void selectionSort(int[] intList) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
