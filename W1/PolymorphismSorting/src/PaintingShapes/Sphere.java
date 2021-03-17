@@ -3,37 +3,35 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package polymorphismsorting;
+package PaintingShapes;
 
 /**
  *
  * @author LENOVO
  */
-public class Rectangle extends Shapes{
-    private double panjang; 
-    private double lebar;
-    //radius in feet
+public class Sphere extends Shapes
+{
+    private double radius; //radius in feet
     //----------------------------------
     // Constructor: Sets up the sphere.
     //----------------------------------
-    public Rectangle(double p, double l)
+    public Sphere(double r)
     {
-        super("Rectangle");
-        panjang = p;
-        lebar = l;
+        super("Sphere");
+        radius = r;
     }
 //-----------------------------------------
 // Returns the surface area of the sphere.
 //-----------------------------------------
     public double area()
     {
-        return panjang*lebar;
+        return 4*Math.PI*radius*radius;
     }
 //-----------------------------------
 // Returns the sphere as a String.
 //-----------------------------------
     public String toString()
     {
-        return super.toString() + " of panjang " + panjang + " of lebar " + lebar;
+        return super.toString() + " of radius " + radius;
     }
 }
