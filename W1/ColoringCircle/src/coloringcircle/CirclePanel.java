@@ -65,9 +65,9 @@ public class CirclePanel extends JPanel
         JPanel colorPanel = new JPanel();  
         colorPanel.add(orange);  
         colorPanel.add(blue);  
+        colorPanel.add(choose); 
         colorPanel.add(red);  
         colorPanel.add(pink); 
-        colorPanel.add(choose); 
  // Add the button panel to the bottom of the main panel   
         this.add(colorPanel, "North"); 
  // Set Color background
