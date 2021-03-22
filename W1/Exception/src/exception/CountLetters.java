@@ -30,7 +30,7 @@ public class CountLetters
     for (int i=0; i < counts.length; i++)  
         if (counts [i] != 0)  
             System.out.println((char)(i +'A') + ": " + counts[i]);   
-    } catch (Exception e){
+    } catch (Exception e){ // Mengcatch error
         System.out.println("Not a letter");
  }      
 } 
