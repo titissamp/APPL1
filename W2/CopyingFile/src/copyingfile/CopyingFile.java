@@ -32,6 +32,5 @@ public class CopyingFile {
         } catch (FileNotFoundException ex){
                 System.out.println("File tidak ditemukan");
                 }
-    }
-    
+    }   
 }
