@@ -19,10 +19,11 @@ public class CopyingFile {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws FileNotFoundException {
-        File file = new File ("C:\\Users\\LENOVO\\OneDrive\\Documents\\Kasus1 Tubes\\APPL1\\W2\\CopyingFile\\src\\copyingfile\\test.txt");
+        File file = new File ("src\\copyingfile\\tes.txt");
         Scanner scan = new Scanner(file);
-        scan.useDelimiter("\\Z");
-        System.out.println(scan.next());
+        while(scan.hasNextLine()){
+            System.out.println(scan.nextLine());
+        }
     }
     
 }
