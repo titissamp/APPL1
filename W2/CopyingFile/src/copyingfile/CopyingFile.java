@@ -19,7 +19,12 @@ public class CopyingFile {
      * @param args the command line arguments
      */
     public static void main(String[] args){
-        File file = new File ("C:\\Users\\LENOVO\\OneDrive\\Documents\\Kasus1 Tubes\\APPL1\\W2\\CopyingFile\\src\\copyingfile\\test.txt");
+        String namafile;
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Masukkan Nama File: ");
+        namafile = scanner.next();
+        File file = new File ("C:\\Users\\LENOVO\\OneDrive\\Documents\\Kasus1 Tubes\\APPL1\\W2\\CopyingFile\\src\\copyingfile\\"+namafile+".txt");
         try(Scanner scan = new Scanner(file)){
             while(scan.hasNextLine()){
                 System.out.println(scan.nextLine());
