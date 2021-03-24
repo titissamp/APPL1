@@ -18,12 +18,15 @@ public class CopyingFile {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws FileNotFoundException {
-        File file = new File ("src\\copyingfile\\tes.txt");
-        Scanner scan = new Scanner(file);
-        while(scan.hasNextLine()){
-            System.out.println(scan.nextLine());
-        }
+    public static void main(String[] args){
+        File file = new File ("C:\\Users\\LENOVO\\OneDrive\\Documents\\Kasus1 Tubes\\APPL1\\W2\\CopyingFile\\src\\copyingfile\\test.txt");
+        try(Scanner scan = new Scanner(file)){
+            while(scan.hasNextLine()){
+                System.out.println(scan.nextLine());
+            }
+        } catch (FileNotFoundException ex){
+                System.out.println("File tidak ditemukan");
+                }
     }
     
 }
