@@ -88,7 +88,29 @@ public class CirclePanel extends JPanel{
         public void actionPerformed(ActionEvent e)  
         {  
             x += dx;  
-            y += dy;  
+            y += dy; 
+ // Circle when hit the edge right and left            
+            if (x < 0){
+                x = 0;
+                left.setEnabled(false);
+            } else if (x + CIRCLE_SIZE > getWidth()){
+                x = getWidth() - CIRCLE_SIZE;
+                right.setEnabled(false);
+            } else {
+                left.setEnabled(true);
+                right.setEnabled(true);
+            }
+ // Circle when hit the edge up and down           
+            if (y < 0){
+                y = 0;
+                up.setEnabled(false);
+            } else if (y + CIRCLE_SIZE > getHeight()){
+                y = getHeight() - CIRCLE_SIZE;
+                down.setEnabled(false);
+            } else {
+                up.setEnabled(true);
+                down.setEnabled(true);
+            }
             repaint();  
         }  
     }  
